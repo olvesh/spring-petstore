@@ -20,7 +20,7 @@ public class JDBCItemDAOImpl implements ItemDAO {
 	        	Item item = new Item();
 	        	item.setId(rs.getLong("ID"));
 	        	item.setName(rs.getString("NAME"));
-	        	item.setDesc(rs.getString("DESC"));
+	        	item.setDescription(rs.getString("DESC"));
 	    		return item;
 	    	}
 	    };
@@ -37,6 +37,7 @@ public class JDBCItemDAOImpl implements ItemDAO {
 	public void setJdbcTemplate(SimpleJdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
+
 
 	public Item getItem(long itemId) {
 		String sql = "SELECT * FROM ITEM WHERE ID = ?";

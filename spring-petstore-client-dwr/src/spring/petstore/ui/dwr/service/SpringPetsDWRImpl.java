@@ -92,7 +92,6 @@ public class SpringPetsDWRImpl implements SpringPetsService {
 
 	public ItemHistory getItemHistory() {
 		return itemHistory;
-
 	}
 
 	/**
